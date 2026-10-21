@@ -1,0 +1,178 @@
+/* Set the default styles for the whole page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set the dashboard colours */
+:root {
+    --bg-primary: #f1f5f9;
+    --bg-surface: #ffffff;
+    --text-main: #0f172a;
+    --accent: #3b82f6;
+}
+
+/* Style the body */
+body {
+    font-family: Arial, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* Arrange the sidebar and main content */
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Style the sidebar */
+.sidebar {
+    width: 250px;
+    background: var(--bg-surface);
+    padding: 25px;
+    border-right: 1px solid #e2e8f0;
+}
+
+/* Style the logo */
+.logo {
+    margin-bottom: 30px;
+    color: var(--accent);
+}
+
+/* Remove bullets from the navigation list */
+nav ul {
+    list-style: none;
+}
+
+/* Style the navigation links */
+.nav-link {
+    display: block;
+    padding: 12px;
+    margin-bottom: 8px;
+    color: var(--text-main);
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+/* Highlight the active navigation link */
+.nav-link.active {
+    background: var(--accent);
+    color: white;
+}
+
+/* Change link appearance when hovered */
+.nav-link:hover {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+/* Style the theme button */
+#theme-toggle {
+    margin-top: 30px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    background: var(--accent);
+    color: white;
+    cursor: pointer;
+}
+
+/* Give the main content room */
+.main-content {
+    flex: 1;
+    padding: 30px;
+    min-width: 0;
+}
+
+/* Style the page header */
+.topbar {
+    margin-bottom: 30px;
+}
+
+/* Style dashboard sections */
+.dashboard-section {
+    background: var(--bg-surface);
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+}
+
+/* Added spacing below section headings */
+.dashboard-section h2 {
+    margin-bottom: 12px;
+}
+
+/* Arranged the metric cards in columns */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+/* Style each metric card */
+.metric-card {
+    padding: 20px;
+    background: var(--bg-primary);
+    border-radius: 10px;
+}
+
+/* Make the numbers stand out */
+.metric-value {
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--accent);
+}
+
+/* Style project cards */
+.project-card {
+    padding: 15px;
+    margin-top: 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+}
+
+/* Style the footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #64748b;
+}
+
+/* Support smaller screens */
+@media (max-width: 760px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+}
+
+/* Dark theme colours */
+[data-theme="dark"] {
+    --bg-primary: #0f172a;
+    --bg-surface: #1e293b;
+    --text-main: #f8fafc;
+    --accent: #60a5fa;
+}
+
+/* Smooth colour changes */
+body,
+.sidebar,
+.dashboard-section,
+.metric-card,
+.project-card {
+    transition: background-color 0.3s, color 0.3s;
+}

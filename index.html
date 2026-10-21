@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Project Nexus analytics and project management dashboard"
+    >
+
+    <title>Project Nexus | Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+
+<body>
+    <div class="dashboard-container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2 class="logo">Nexus</h2>
+
+            <nav aria-label="Main navigation">
+                <ul>
+                    <li>
+                        <a href="#overview" class="nav-link active"
+                           aria-current="page">Overview</a>
+                    </li>
+                    <li>
+                        <a href="#projects" class="nav-link">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#analytics" class="nav-link">Analytics</a>
+                    </li>
+                    <li>
+                        <a href="#settings" class="nav-link">Settings</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <button id="theme-toggle" type="button">
+                🌓 Toggle Theme
+            </button>
+            <button id="dark-mode-toggle" type="button">
+                🌙 Dark Mode
+            </button>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="topbar">
+                <div>
+                    <h1>Project Nexus Dashboard</h1>
+                    <p>Manage your projects in one place.</p>
+                </div>
+            </header>
+
+            <!-- Overview -->
+            <section id="overview" class="dashboard-section overview">
+                <h2>Overview</h2>
+                <p>
+                    Welcome to Project Nexus. Here you can manage your
+                    projects and view your analytics.
+                </p>
+
+                <div class="metrics-grid">
+                    <article class="metric-card">
+                        <h3>Total Projects</h3>
+                        <p class="metric-value">24</p>
+                    </article>
+
+                    <article class="metric-card">
+                        <h3>Active Users</h3>
+                        <p class="metric-value">128</p>
+                    </article>
+
+                    <article class="metric-card">
+                        <h3>Completed Projects</h3>
+                        <p class="metric-value">16</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Projects -->
+            <section id="projects" class="dashboard-section projects">
+                <h2>Projects</h2>
+                <p>Your current projects will appear here.</p>
+
+                <article class="project-card">
+                    <h3>Website Redesign</h3>
+                    <p>Status: In progress</p>
+                </article>
+
+                <article class="project-card">
+                    <h3>Mobile Application</h3>
+                    <p>Status: Planning</p>
+                </article>
+            </section>
+
+            <!-- Analytics -->
+            <section id="analytics" class="dashboard-section analytics">
+                <h2>Analytics</h2>
+                <p>View your project performance metrics here.</p>
+            </section>
+
+            <!-- Settings -->
+            <section id="settings" class="dashboard-section settings">
+                <h2>Settings</h2>
+                <p>Adjust your dashboard preferences and account settings here.</p>
+                
+            </section>
+
+            <footer>
+                <p>&copy; 2026 Project Nexus. All rights reserved.</p>
+            </footer>
+        </main>
+
+    </div>
+</body>
+</html>
